@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vikas Water Solution Pvt Ltd - Water solution services in Safedabad, Barabanki, Lucknow.">
+<title>Vikas Water Solution Pvt Ltd</title>
+<style>
+:root{
+  --blue:#0877d1; --deep:#063b6f; --cyan:#19b8e6; --light:#f2f9ff;
+  --text:#15324b; --white:#fff; --shadow:0 14px 40px rgba(5,57,105,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid #e8f1f8}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--deep);font-size:1.05rem}
+.logo-mark{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,var(--cyan),var(--blue));color:white;font-size:21px;box-shadow:0 7px 18px rgba(8,119,209,.25)}
+nav{display:flex;gap:26px;font-size:.94rem;font-weight:600}
+nav a:hover{color:var(--blue)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#eefaff 0%,#fff 58%,#eaf5ff 100%);padding:88px 0 78px}
+.hero:before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;right:-150px;top:-170px;background:radial-gradient(circle,#8ee6fa55,transparent 68%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center;position:relative}
+.badge{display:inline-block;background:#dff5ff;color:#0067a9;padding:7px 13px;border-radius:999px;font-size:.84rem;font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(2.4rem,5vw,4.5rem);line-height:1.03;letter-spacing:-2px;color:var(--deep);margin-bottom:20px}
+h1 span{color:var(--blue)}
+.hero p{font-size:1.12rem;max-width:650px;color:#52708b;margin-bottom:28px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 20px;border-radius:10px;font-weight:800;display:inline-flex;align-items:center;gap:8px;transition:.2s}
+.btn-primary{background:var(--blue);color:white;box-shadow:0 9px 22px rgba(8,119,209,.23)}
+.btn-primary:hover{transform:translateY(-2px);background:#066ab9}
+.btn-secondary{border:1px solid #bcd7eb;background:white;color:var(--deep)}
+.visual{background:white;border:1px solid #dcecf7;border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+.water-card{min-height:330px;border-radius:22px;background:linear-gradient(160deg,#0b8de4,#063b6f);color:#fff;display:flex;flex-direction:column;justify-content:space-between;padding:28px;overflow:hidden;position:relative}
+.water-card:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;right:-70px;bottom:-80px;border:30px solid #ffffff22;box-shadow:0 0 0 25px #ffffff10}
+.drop{font-size:70px;line-height:1}
+.water-card h3{font-size:1.55rem;max-width:260px}
+.water-card p{color:#d8f3ff;font-size:.95rem}
+section{padding:80px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+.section-head h2{font-size:2.25rem;color:var(--deep);margin-bottom:10px}
+.section-head p{color:#66839b}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{padding:28px;border:1px solid #e1edf5;border-radius:18px;background:white;box-shadow:0 8px 25px rgba(10,70,110,.06)}
+.icon{width:50px;height:50px;border-radius:14px;background:#e8f7ff;color:var(--blue);display:grid;place-items:center;font-size:24px;margin-bottom:18px}
+.card h3{color:var(--deep);margin-bottom:8px}
+.card p{color:#6a8296;font-size:.95rem}
+.about{background:var(--light)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}
+.info-box{background:linear-gradient(145deg,#063b6f,#0877d1);color:#fff;border-radius:25px;padding:34px;min-height:300px}
+.info-box h3{font-size:1.65rem;margin-bottom:10px}
+.info-box p{color:#d8efff}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:25px}
+.stat{background:#ffffff14;border:1px solid #ffffff1f;border-radius:14px;padding:16px}
+.stat strong{display:block;font-size:1.4rem}
+.contact{background:linear-gradient(180deg,#fff,#f2faff)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.contact-card{border:1px solid #deebf4;border-radius:20px;padding:28px;background:#fff;box-shadow:0 8px 25px rgba(10,70,110,.05)}
+.contact-row{display:flex;gap:15px;align-items:flex-start;padding:14px 0;border-bottom:1px solid #edf3f7}
+.contact-row:last-child{border-bottom:0}
+.contact-icon{font-size:22px;width:30px}
+.contact-row strong{display:block;color:var(--deep)}
+.contact-row span{color:#688198}
+footer{background:#052f57;color:#d8ecfb;padding:30px 0}
+.footer-flex{display:flex;justify-content:space-between;gap:20px;align-items:center}
+footer small{color:#a8c5d9}
+@media(max-width:800px){
+  nav{display:none}.hero{padding:65px 0}
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  h1{letter-spacing:-1px}.visual{order:2}
+  section{padding:62px 0}.footer-flex{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home"><span class="logo-mark">💧</span>Vikas Water Solution</a>
+    <nav>
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge">WATER SOLUTION SERVICES</div>
+      <h1>Pure water.<br><span>Better solutions.</span></h1>
+      <p>Welcome to <strong>Vikas Water Solution Pvt Ltd</strong> — your local water solution partner serving Safedabad, Barabanki and the Lucknow area.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="tel:+917408424640">📞 Call Vikas</a>
+        <a class="btn btn-secondary" href="https://wa.me/917408424640" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </div>
+    <div class="visual">
+      <div class="water-card">
+        <div class="drop">💧</div>
+        <div>
+          <h3>Reliable Water Solutions</h3>
+          <p>Professional service with a focus on quality, trust and customer satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>Our Services</h2>
+      <p>Practical water solutions for homes, businesses and local customers.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="icon">💧</div><h3>Water Solutions</h3><p>Water-related solutions designed around your needs and usage.</p></article>
+      <article class="card"><div class="icon">⚙️</div><h3>Installation & Support</h3><p>Helpful installation guidance and dependable service support.</p></article>
+      <article class="card"><div class="icon">🛠️</div><h3>Maintenance</h3><p>Ongoing care and maintenance to keep your water systems working smoothly.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="info-box">
+      <h3>Vikas Water Solution Pvt Ltd</h3>
+      <p>Serving customers in Safedabad, Barabanki and Lucknow with a straightforward, service-first approach.</p>
+      <div class="stats">
+        <div class="stat"><strong>Local</strong><span>Safedabad & Barabanki</span></div>
+        <div class="stat"><strong>Direct</strong><span>Talk to the owner</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="section-head" style="text-align:left;margin:0 0 20px">
+        <h2>About Us</h2>
+        <p>Vikas Water Solution Pvt Ltd is led by <strong>Vikas</strong>. We aim to make getting dependable water solutions simple and convenient for customers around the Lucknow region.</p>
+      </div>
+      <p style="color:#66839b">For service enquiries, pricing and availability, contact Vikas directly on the phone number below.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <h2>Contact Us</h2>
+      <p>Get in touch for water solution enquiries and service information.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-row"><div class="contact-icon">👤</div><div><strong>Owner</strong><span>Vikas</span></div></div>
+        <div class="contact-row"><div class="contact-icon">📱</div><div><strong>Mobile</strong><span>7408424640</span></div></div>
+        <div class="contact-row"><div class="contact-icon">📍</div><div><strong>Address</strong><span>Safedabad, Barabanki, Lucknow, Uttar Pradesh</span></div></div>
+      </div>
+      <div class="contact-card">
+        <h3 style="color:#063b6f;margin-bottom:10px">Ready to talk?</h3>
+        <p style="color:#66839b;margin-bottom:22px">Call directly or send a WhatsApp message to discuss your requirement.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="tel:+917408424640">📞 7408424640</a>
+          <a class="btn btn-secondary" href="https://wa.me/917408424640" target="_blank" rel="noopener">💬 Message on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-flex">
+    <div><strong>Vikas Water Solution Pvt Ltd</strong><br><small>Safedabad, Barabanki, Lucknow</small></div>
+    <small>© 2026 Vikas Water Solution Pvt Ltd. All rights reserved.</small>
+  </div>
+</footer>
+</body>
+</html>
